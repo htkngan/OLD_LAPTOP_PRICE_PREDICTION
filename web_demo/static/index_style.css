@@ -1,0 +1,121 @@
+body {
+    justify-content: center;
+    text-align: center;
+    background-color: #ebc9c9;
+    height: 100vh;
+    margin-top: 50px;
+    padding: 0;
+}
+
+h1 {
+    width: 100%;
+    font-size: 50px;
+    background-color: rgb(204, 25, 25);
+    color: white;
+    margin: 0;
+    padding: 30px;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    text-align: center; /* Canh giữa văn bản */
+    line-height: 1.5; /* Điều chỉnh khoảng cách dòng để căn giữa */
+    position: absolute; /* Đặt vị trí tuyệt đối để căn giữa */
+}
+
+img {
+    max-width: 30%; /* Đảm bảo ảnh không vượt quá chiều rộng của cha */
+    height: auto; /* Giữ tỷ lệ khung hình ảnh */
+    border-radius: 50%;
+    margin-top: -50px;
+    margin-left: 25%;
+}
+
+form {
+    margin-top: 100px;
+    margin-left: -100px; /* Tạo khoảng cách giữa hình ảnh và biểu mẫu */
+}
+
+.container {
+    display: flex; /* Sử dụng Flexbox */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.btn {
+    margin-top: 0px;
+    margin-left: 205%;
+    font-size:medium;
+    font-weight: bold;
+    width: 100px;
+    height: 3em;
+    background-color: #f7f7f7;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 700;
+    border-radius: 20px;
+    border: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0px 0em 0 1.1em rgb(255, 0, 0);
+    border: 0.2em solid rgba(0, 0, 0, 1);
+  }
+  .btn:hover {
+    transform: translateY(-0em);
+    transition: all 0.2s ease;
+  }
+  .btn:active {
+    background-color: #ff3c00;
+    transform: translateY(0.2em);
+    box-shadow: 0px 0px;
+    transition: all 0.05s ease;
+  }
+
+
+label {
+    font-size: large;
+    font-weight: bold;
+}
+  
+.dung_luong_pin {
+    font-size: large;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #FEFCF3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+select {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #FEFCF3;
+    box-shadow: 0 2px 4px rgba(252, 252, 252, 0.997);
+}
+
+.zz{
+    margin-left: 100px;
+}
+
+select {
+    margin-left: 100px;
+-webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: rgb(250, 250, 250);
+  background-image: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+option{
+    text-align: center; 
+}

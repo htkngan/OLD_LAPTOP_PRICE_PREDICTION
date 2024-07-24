@@ -1,0 +1,38 @@
+body {
+    justify-content: center;
+    text-align: center;
+    background-color: #ebc9c9;
+    height: 100vh;
+    margin-top: 50px;
+    padding: 0;
+}
+
+h1 {
+    width: 100%;
+    font-size: 50px;
+    background-color: rgb(204, 25, 25);
+    color: white;
+    margin: 0;
+    padding: 30px;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    text-align: center; /* Canh giữa văn bản */
+    line-height: 1.5; /* Điều chỉnh khoảng cách dòng để căn giữa */
+    position: absolute; /* Đặt vị trí tuyệt đối để căn giữa */
+}
+
+p {
+    width: 100%;
+    font-size: 50px;
+    background-color: rgb(204, 25, 25);
+    color: white;
+    margin: 0;
+    padding: 30px;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    text-align: center; /* Canh giữa văn bản */
+    line-height: 1.5; /* Điều chỉnh khoảng cách dòng để căn giữa */
+    position: absolute; 
+}

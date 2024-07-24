@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="/static/res_style.css">
+
+</head>
+<body>
+    <h1>Result</h1>
+    <p id="predictionResult">The predicted result is: {{ prediction }} VNĐ</p>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var predictionElement = document.getElementById('predictionResult');
+            var predictionValue = parseInt('{{ prediction }}');
+            var formattedPrediction = predictionValue.toLocaleString('en-US');
+            predictionElement.innerHTML = 'The predicted result is: ' + formattedPrediction + ' VNĐ';
+        });
+    </script>
+</body>
+</html>

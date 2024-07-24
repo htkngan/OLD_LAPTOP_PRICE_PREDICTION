@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Boosting Model Deployment</title>
+    <link rel="stylesheet" type="text/css" href="/static/index_style.css">
+
+</head>
+<body>
+    <h1>Old Laptop Price Prediction</h1>
+    <div class="container">
+        <form action="/predict" method="post">
+            <div class="dung_luong_pin">
+            <label class = "first" for="battery_capacity">Dung Lượng Pin (Wh):</label>
+            <input class = "zz" type="number" name="battery_capacity" step="any" placeholder="Nhập..." required>
+            </div>
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="graphic_card_type">Loại Card Đồ Họa:</label>
+            <select name="graphic_card_type" required>
+                <option selected disabled>Chọn </option>
+                <option value="Intel Graphics">Intel</option>
+                <option value="NVIDIA Graphics">NVIDIA</option>
+                <option value="AMD Graphics">AMD</option>
+                <option value="Microsoft SQ1 Adreno">Microsoft SQ1 Adreno</option>
+            </select>
+            </div>
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="cpu_type">CPU:</label>
+            <select name="cpu_type" required>
+                <option selected disabled>Chọn</option>
+                <option value="Intel Core i3">Intel Core i3</option>
+                <option value="Intel Core i5">Intel Core i5</option>
+                <option value="Intel Core i7">Intel Core i7</option>
+                <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+                <option value="AMD Ryzen 7">AMD Ryzen 7</option>
+                <option value="AMD Ryzen 9">AMD Ryzen 9</option>
+                <option value="Intel Pentium">Intel Pentium</option>
+                <option value="AMD Ryzen 7">Không biết</option>
+            </select>
+            </div>
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="laptop_state">Tình Trạng Của Máy:</label>
+            <select name="laptop_state" required>
+                <option selected disabled>Chọn</option>
+                <option value="Cũ đẹp">Cũ đẹp</option>
+                <option value="Trầy xước">Trầy xước</option>
+                <option value="Đã kích hoạt">Đã kích hoạt</option>
+                <option value="Xước cấn">Xước cấn</option>
+            </select>
+            </div>
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="series">Dòng máy:</label>
+            <select name="series" required>
+                <option selected disabled>Chọn</option>
+                <option value="Office">Office</option>
+                <option value="2 in 1">2 in 1</option>
+                <option value="Ultrabook">Ultrabook</option>
+                <option value="Gaming">Gaming</option>
+                <option value="Office">Không</option>
+            </select>
+            </div>
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="screen_tech">Công nghệ màn hình:</label>
+            <select name="screen_tech" required>
+                <option selected disabled>Chọn</option>
+                <option value="LED BACKLIT">LED BACKLIT</option>
+                <option value="PIXELSENSE">PIXELSENSE</option>
+                <option value="IPS">IPS</option>
+                <option value="DOLBY VISION">DOLBY VISION</option>
+                <option value="NTSC">NTSC</option>
+                <option value="OLED">OLED</option>
+                <option value="HDR">HDR</option>
+                <option value="TN">Tấm nền TN</option>
+                <option value="LED">LED</option>
+                <option value="COMFYVIEW">COMFYVIEW</option>
+                <option value="IPS">Không biết</option>
+            </select>
+            </div>
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="cell_num">Số lõi của pin:</label>
+            <select name="cell_num" required>
+                <option selected disabled>Chọn</option>
+                <option value="2 cell">2 cell</option>
+                <option value="3 cell">3 cell</option>
+                <option value="4 cell">4 cell</option>
+                <option value="6 cell">6 cell</option>
+                <option value="3 cell">Không biết</option>
+
+            </select>
+            </div>
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="ram_mem">Bộ nhớ RAM:</label>
+            <select name="ram_mem" required>
+                <option selected disabled>Chọn</option>
+                <option value="4GB">4GB</option>
+                <option value="8GB">8GB</option>
+                <option value="12GB">12GB</option>
+                <option value="16GB">16GB</option>
+                <option value="24GB">24GB</option>
+                <option value="32GB">32GB</option>
+            </select>
+            </div>  
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="ram_type">Loại RAM:</label>
+            <select name="ram_type" required>
+                <option selected disabled>Chọn</option>
+                <option value="LPDDR4X">LPDDR4X</option>
+                <option value="DDR4">DDR4</option>
+                <option value="LPDDR5">LPDDR5</option>
+                <option value="DDR5">DDR5</option>
+                <option value="LPDDR4">LPDDR4</option>
+                <option value="DDR IV">DDR IV</option>
+                <option value="DDR4">Không biết</option>
+            </select>
+            </div>  
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="hard_disk">Ổ cứng:</label>
+            <select name="hard_disk" required>
+                <option selected disabled>Chọn</option>
+                <option value="SSD 128GB">SSD 128GB</option>
+                <option value="SSD 256GB">SSD 256GB</option>
+                <option value="SSD 512GB">SSD 512GB</option>
+                <option value="SSD 1TB">SSD 1TB</option>
+            </select>
+            </div>  
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="intel_tech">Công nghệ chip Intel:</label>
+            <select name="intel_tech" required>
+                <option selected disabled>Chọn</option>
+                <option value="Không">Không</option>
+                <option value="Intel Evo">Intel Evo</option>
+                <option value="Intel Gaming">Intel Gaming</option>
+            </select>
+            </div>
+            <p style="margin:5px;"></p>
+            <div>
+            <label for="screen_resolution">Độ phân giải màn hình:</label>
+            <select name="screen_resolution" required>
+                <option selected disabled>Chọn</option>
+                <option value="(1280, 720)">(1280, 720)</option>
+                <option value="(1366, 768)">(1366, 768)</option>
+                <option value="(1536, 1024)">(1536, 1024)</option>
+                <option value="(1920, 1080)">(1920, 1080)</option>
+                <option value="(1920, 1200)">(1920, 1200)</option>
+                <option value="(2160, 1440)">(2160, 1440)</option>
+                <option value="(2240, 1400)">(2240, 1400)</option>
+                <option value="(2256, 1504)">(2256, 1504)</option>
+                <option value="(2560, 1440)">(2560, 1440)</option>
+                <option value="(2560, 1600)">(2560, 1600)</option>
+                <option value="(2736, 1824)">(2736, 1824)</option>
+                <option value="(2880, 1800)">(2880, 1800)</option>
+                <option value="(2880, 1920)">(2880, 1920)</option>
+                <option value="(3000, 2000)">(3000, 2000)</option>
+                <option value="(3840, 2160)">(3840, 2160)</option>
+            </select>
+            </div>
+            <br>
+            <input type="submit" class="btn" value="PREDICT">
+            <br>
+        </form>
+        <img src="../src/cellphones_icon.jpg" alt="Mô tả ảnh">
+    </div>
+</body>
+</html>
